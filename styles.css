@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: url("img.avif") center/cover no-repeat;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  background-color: coral;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"],
+.input-container button {
+  width: 90%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-container button {
+  background-color: orangered;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: darkorange;
+}
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.information div {
+  flex: 1 1 calc(50% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.information div h3 {
+  margin-bottom: 10px;
+  color: coral;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .information {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .information div {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .input-container input[type="text"],
+  .input-container button {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
