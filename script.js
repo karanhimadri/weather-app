@@ -16,8 +16,11 @@ searchBtn.addEventListener("click", () => {
     })
     .then((data) => {
       //console.log(data);
-      if (data.cod == 404) {
+      if (data.cod > 400) {
         place.innerText = "City or Place not Found";
+        Teampareture.innerText = `0°C`;
+        windSpeed.innerText = `0 Km/h`;
+        Humidity.innerText = `0 %`;
       } else {
         place.innerText = `${cityName}`;
         Teampareture.innerText = `${data.main.temp}°C`;
